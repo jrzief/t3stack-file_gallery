@@ -10,5 +10,3 @@
 - [ ] Add authentication (w/clerk) -[ ] Add image upload
 - [ ] Analytics (posthog)
 - [ ] Ratelimiting (upstash)
-
-new github personal token -- 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
