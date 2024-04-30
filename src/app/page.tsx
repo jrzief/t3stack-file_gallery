@@ -25,12 +25,14 @@ async function Images() {
     orderBy: (model, {desc}) => desc(model.id),
   }); */
   return (
-    <div className="flex flex-wrap justify-center gap-4">
-        {images.map((image) => (
-          <div key={image.id} className="w-48 flex flex-col">
-            <Image src={image.url} style={{objectFit: "contain"}} alt={image.name} width={192}
-              height={192}
-            />
+    <div className="flex flex-wrap justify-center gap-4 p-4">
+        {[...images, ...images, ...images].map((image) => (
+          <div key={image.id} className="w-48 h-48 flex flex-col py-2">
+            <Link href={`/img/${image.id}`}>
+              <Image src={image.url} style={{objectFit: "contain"}} alt={image.name} width={192}
+                height={128}
+              />
+            </Link>
             <div>{image.name}</div>
           </div>
         ))}
@@ -52,6 +54,7 @@ export default async function HomePage() {
         <div className="h-full w-full text-2xl text-center">Please sign in above</div>
       </SignedOut>
       <SignedIn>
+        {/* @ts-expect-error Images */}
         <Images />
       </SignedIn>
     </main>
