@@ -10,8 +10,9 @@
 - [x ] Add authentication (w/clerk)
 - [x ] Add image upload
 - [x] taint (server-only)
-- [ ] Use Next/Image component
-- [ ] Error Management (w/ Sentry)
-- [ ] Routing/image page (parallel route)
+- [x] Use Next/Image component
+- [x] Error Management (w/ Sentry)
+- [x] Routing/image page (parallel route)
 - [ ] Analytics (posthog)
-- [ ] Ratelimiting (upstash)
+- [x] Ratelimiting (upstash)
+      [x ] Limit Upload user permissions
